@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #FBF9F5;
+  --color-cream-dark: #F5F0E8;
+  --color-olive: #4A6B53;
+  --color-olive-dark: #2D4A3E;
+  --color-olive-light: #5A8066;
+  --color-gold: #C5A880;
+  --color-gold-light: #D4BC9A;
+  --color-charcoal: #1F2937;
+  --color-charcoal-light: #374151;
+  --color-gray-soft: #6B7280;
+  --color-white: #FFFFFF;
+  --color-terracotta: #B8755D;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-cream-dark: var(--color-cream-dark);
+  --color-olive: var(--color-olive);
+  --color-olive-dark: var(--color-olive-dark);
+  --color-olive-light: var(--color-olive-light);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-charcoal: var(--color-charcoal);
+  --color-charcoal-light: var(--color-charcoal-light);
+  --color-gray-soft: var(--color-gray-soft);
+  --color-terracotta: var(--color-terracotta);
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-olive);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-olive);
+  color: var(--color-white);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-strong {
+  background: rgba(251, 249, 245, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Organic shape mask for hero image */
+.organic-shape {
+  border-radius: 60% 40% 55% 45% / 55% 60% 40% 45%;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-olive) 0%, var(--color-olive-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtle leaf decoration */
+.leaf-pattern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(ellipse at top right, rgba(74, 107, 83, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Smooth CTA button glow */
+.btn-glow {
+  box-shadow: 0 4px 14px rgba(74, 107, 83, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 6px 20px rgba(74, 107, 83, 0.4);
+  transform: translateY(-2px);
+}
+
+/* FAQ accordion animation */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.accordion-content.open {
+  grid-template-rows: 1fr;
+}
+
+.accordion-inner {
+  overflow: hidden;
+}
