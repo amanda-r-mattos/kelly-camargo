@@ -51,10 +51,13 @@ export default function Header() {
           href="#inicio"
           className="flex items-center gap-2 group"
         >
-          <Leaf
-            className="w-6 h-6 text-olive transition-transform duration-300 group-hover:rotate-12"
-            strokeWidth={1.5}
-          />
+          <div className="relative">
+            <Leaf
+              className="w-7 h-7 text-green transition-all duration-300 group-hover:rotate-12 group-hover:text-green-light"
+              strokeWidth={1.5}
+            />
+            <div className="absolute inset-0 bg-green/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
           <span className="font-[family-name:var(--font-playfair)] text-lg md:text-xl font-semibold text-charcoal">
             Kelly Camargo
           </span>
@@ -69,7 +72,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-charcoal-light hover:text-olive transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-olive after:transition-all after:duration-300 hover:after:w-full"
+              className="text-sm font-medium text-charcoal-light hover:text-green transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-green after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.label}
             </a>
@@ -78,7 +81,7 @@ export default function Header() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 px-6 py-2.5 bg-olive text-white text-sm font-semibold rounded-full btn-glow hover:bg-olive-dark transition-colors duration-300"
+            className="ml-2 px-6 py-2.5 bg-green text-white text-sm font-semibold rounded-full btn-glow hover:bg-green-dark transition-colors duration-300"
           >
             Agendar Consulta
           </a>
@@ -87,7 +90,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden p-2 text-charcoal hover:text-olive transition-colors"
+          className="lg:hidden p-2 text-charcoal hover:text-green transition-colors"
           aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -106,11 +109,14 @@ export default function Header() {
           >
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute top-5 right-5 p-2 text-charcoal hover:text-olive transition-colors"
+              className="absolute top-5 right-5 p-2 text-charcoal hover:text-green transition-colors"
               aria-label="Fechar menu"
             >
               <X size={28} />
             </button>
+
+            {/* Decorative leaf in mobile menu */}
+            <Leaf className="w-10 h-10 text-green/20 mb-2" strokeWidth={1} />
 
             {NAV_LINKS.map((link, i) => (
               <motion.a
@@ -120,7 +126,7 @@ export default function Header() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
-                className="font-[family-name:var(--font-playfair)] text-2xl font-medium text-charcoal hover:text-olive transition-colors"
+                className="font-[family-name:var(--font-playfair)] text-2xl font-medium text-charcoal hover:text-green transition-colors"
               >
                 {link.label}
               </motion.a>
@@ -133,7 +139,7 @@ export default function Header() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="mt-4 px-8 py-3 bg-olive text-white font-semibold rounded-full btn-glow text-lg"
+              className="mt-4 px-8 py-3 bg-green text-white font-semibold rounded-full btn-glow text-lg"
             >
               Agendar Consulta
             </motion.a>

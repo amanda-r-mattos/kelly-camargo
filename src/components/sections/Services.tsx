@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Star, ArrowRight } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -70,8 +70,8 @@ export default function Services() {
               <div
                 className={`relative h-full flex flex-col p-8 rounded-2xl transition-all duration-500 ${
                   plan.highlight
-                    ? "bg-olive-dark text-white shadow-2xl shadow-olive/20 scale-[1.02] border-2 border-olive"
-                    : "bg-white/70 border border-transparent hover:border-gold/20 hover:bg-white hover:shadow-xl hover:shadow-olive/5"
+                    ? "bg-green-dark text-white shadow-2xl shadow-green/20 scale-[1.02] border-2 border-green"
+                    : "bg-white/70 border border-transparent hover:border-green/15 hover:bg-white hover:shadow-xl hover:shadow-green/8"
                 }`}
               >
                 {/* Badge */}
@@ -79,12 +79,23 @@ export default function Services() {
                   <span
                     className={`absolute -top-3 left-8 px-4 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${
                       plan.highlight
-                        ? "bg-gold text-charcoal"
-                        : "bg-olive/10 text-olive"
+                        ? "bg-mint text-green-dark"
+                        : "bg-green/10 text-green"
                     }`}
                   >
                     {plan.badge}
                   </span>
+                )}
+
+                {/* Leaf decoration on highlighted card */}
+                {plan.highlight && (
+                  <svg
+                    className="absolute top-4 right-4 w-16 h-16 text-white/[0.05]"
+                    viewBox="0 0 64 64"
+                    fill="currentColor"
+                  >
+                    <path d="M32 4C32 4 56 16 56 36C56 49 45 58 32 60C19 58 8 49 8 36C8 16 32 4 32 4Z" />
+                  </svg>
                 )}
 
                 <div className="flex-1">
@@ -110,8 +121,8 @@ export default function Services() {
                         <div
                           className={`shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 ${
                             plan.highlight
-                              ? "bg-gold/20 text-gold"
-                              : "bg-olive/10 text-olive"
+                              ? "bg-mint/20 text-mint"
+                              : "bg-green/10 text-green"
                           }`}
                         >
                           <Check size={12} strokeWidth={3} />
@@ -134,8 +145,8 @@ export default function Services() {
                   rel="noopener noreferrer"
                   className={`inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-full font-semibold text-sm transition-all duration-300 group ${
                     plan.highlight
-                      ? "bg-white text-olive hover:bg-cream hover:shadow-lg"
-                      : "bg-olive text-white hover:bg-olive-dark btn-glow"
+                      ? "bg-white text-green hover:bg-cream hover:shadow-lg"
+                      : "bg-green text-white hover:bg-green-dark btn-glow"
                   }`}
                 >
                   Quero este plano

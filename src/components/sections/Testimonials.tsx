@@ -64,6 +64,22 @@ export default function Testimonials() {
       id="depoimentos"
       className="py-20 md:py-28 bg-gradient-to-b from-cream-dark to-cream relative overflow-hidden"
     >
+      {/* Leaf decoration */}
+      <svg
+        className="absolute top-12 left-4 w-20 h-20 text-green/[0.04] pointer-events-none"
+        viewBox="0 0 80 80"
+        fill="currentColor"
+      >
+        <path d="M40 8C40 8 68 22 68 44C68 58 55 70 40 72C25 70 12 58 12 44C12 22 40 8 40 8Z" />
+      </svg>
+      <svg
+        className="absolute bottom-12 right-8 w-16 h-16 text-green/[0.05] pointer-events-none"
+        viewBox="0 0 64 64"
+        fill="currentColor"
+      >
+        <path d="M32 4C32 4 56 16 56 36C56 49 45 58 32 60C19 58 8 49 8 36C8 16 32 4 32 4Z" />
+      </svg>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Depoimentos"
@@ -78,7 +94,7 @@ export default function Testimonials() {
             <button
               onClick={goPrev}
               disabled={currentIndex === 0}
-              className="p-2 rounded-full border border-charcoal/10 text-charcoal hover:bg-olive hover:text-white hover:border-olive disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-charcoal disabled:hover:border-charcoal/10 transition-all duration-300"
+              className="p-2 rounded-full border border-charcoal/10 text-charcoal hover:bg-green hover:text-white hover:border-green disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-charcoal disabled:hover:border-charcoal/10 transition-all duration-300"
               aria-label="Depoimento anterior"
             >
               <ChevronLeft size={20} />
@@ -86,7 +102,7 @@ export default function Testimonials() {
             <button
               onClick={goNext}
               disabled={currentIndex >= maxIndex}
-              className="p-2 rounded-full border border-charcoal/10 text-charcoal hover:bg-olive hover:text-white hover:border-olive disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-charcoal disabled:hover:border-charcoal/10 transition-all duration-300"
+              className="p-2 rounded-full border border-charcoal/10 text-charcoal hover:bg-green hover:text-white hover:border-green disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-charcoal disabled:hover:border-charcoal/10 transition-all duration-300"
               aria-label="Próximo depoimento"
             >
               <ChevronRight size={20} />
@@ -115,7 +131,7 @@ export default function Testimonials() {
                   onClick={() => setCurrentIndex(i)}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     i === currentIndex
-                      ? "bg-olive w-6"
+                      ? "bg-green w-6"
                       : "bg-charcoal/15 hover:bg-charcoal/30"
                   }`}
                   aria-label={`Ir para depoimento ${i + 1}`}
@@ -144,11 +160,11 @@ function TestimonialCard({
   testimonial: (typeof testimonials)[number];
 }) {
   return (
-    <div className="h-full p-6 md:p-8 rounded-2xl bg-white/80 border border-transparent hover:border-gold/20 hover:shadow-lg hover:shadow-olive/5 transition-all duration-500 flex flex-col">
+    <div className="h-full p-6 md:p-8 rounded-2xl bg-white/80 border border-transparent hover:border-green/15 hover:shadow-lg hover:shadow-green/8 transition-all duration-500 flex flex-col">
       {/* Quote icon */}
       <Quote
         size={32}
-        className="text-gold/30 mb-4 rotate-180"
+        className="text-green/20 mb-4 rotate-180"
         strokeWidth={1}
       />
 
@@ -174,7 +190,7 @@ function TestimonialCard({
         <p className="font-semibold text-charcoal text-sm">
           {testimonial.name}
         </p>
-        <p className="text-xs text-olive font-medium">{testimonial.role}</p>
+        <p className="text-xs text-green font-medium">{testimonial.role}</p>
       </div>
     </div>
   );

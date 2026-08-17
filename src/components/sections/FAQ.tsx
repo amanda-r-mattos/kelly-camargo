@@ -48,6 +48,15 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="py-20 md:py-28 relative">
+      {/* Subtle leaf accent */}
+      <svg
+        className="absolute top-16 right-8 w-24 h-24 text-green/[0.03] pointer-events-none"
+        viewBox="0 0 96 96"
+        fill="currentColor"
+      >
+        <path d="M48 8C48 8 84 24 84 52C84 68 69 80 48 84C27 80 12 68 12 52C12 24 48 8 48 8Z" />
+      </svg>
+
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Dúvidas"
@@ -61,7 +70,7 @@ export default function FAQ() {
               <div
                 className={`rounded-2xl border transition-all duration-300 ${
                   openIndex === i
-                    ? "bg-white border-olive/15 shadow-md shadow-olive/5"
+                    ? "bg-white border-green/15 shadow-md shadow-green/5"
                     : "bg-white/50 border-transparent hover:bg-white/80"
                 }`}
               >
@@ -75,7 +84,7 @@ export default function FAQ() {
                   </span>
                   <ChevronDown
                     size={20}
-                    className={`shrink-0 text-olive transition-transform duration-300 ${
+                    className={`shrink-0 text-green transition-transform duration-300 ${
                       openIndex === i ? "rotate-180" : ""
                     }`}
                   />

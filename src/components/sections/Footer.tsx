@@ -24,12 +24,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contato" className="bg-olive-dark text-white relative overflow-hidden">
+    <footer id="contato" className="bg-green-dark text-white relative overflow-hidden">
       {/* Decorative */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-white/[0.02] blur-3xl pointer-events-none" />
 
       {/* CTA Strip */}
-      <div className="bg-olive py-12 md:py-16">
+      <div className="bg-green py-12 md:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-semibold text-white mb-4">
             Pronta para transformar sua saúde?
@@ -42,7 +42,7 @@ export default function Footer() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-10 py-4 bg-white text-olive font-bold rounded-full text-base hover:bg-cream hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-10 py-4 bg-white text-green font-bold rounded-full text-base hover:bg-cream hover:text-green-dark hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
           >
             <MessageCircle size={22} />
             Agendar Consulta pelo WhatsApp
@@ -57,7 +57,7 @@ export default function Footer() {
             {/* Brand */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2 mb-4">
-                <Leaf size={24} className="text-gold" strokeWidth={1.5} />
+                <Leaf size={24} className="text-mint" strokeWidth={1.5} />
                 <span className="font-[family-name:var(--font-playfair)] text-xl font-semibold">
                   Kelly Camargo
                 </span>
@@ -91,7 +91,7 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-gold mb-4">
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-mint mb-4">
                 Navegação
               </h4>
               <ul className="space-y-2.5">
@@ -110,22 +110,22 @@ export default function Footer() {
 
             {/* Contact */}
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-gold mb-4">
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-mint mb-4">
                 Contato
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <Phone size={16} className="text-gold mt-0.5 shrink-0" />
+                  <Phone size={16} className="text-mint mt-0.5 shrink-0" />
                   <span className="text-sm text-white/60">(00) 00000-0000</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Mail size={16} className="text-gold mt-0.5 shrink-0" />
+                  <Mail size={16} className="text-mint mt-0.5 shrink-0" />
                   <span className="text-sm text-white/60">
                     contato@kellycamargo.com.br
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <MapPin size={16} className="text-gold mt-0.5 shrink-0" />
+                  <MapPin size={16} className="text-mint mt-0.5 shrink-0" />
                   <span className="text-sm text-white/60">
                     Atendimento online e presencial
                   </span>
@@ -135,12 +135,12 @@ export default function Footer() {
 
             {/* Hours */}
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-gold mb-4">
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-mint mb-4">
                 Horário de Atendimento
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <Clock size={16} className="text-gold mt-0.5 shrink-0" />
+                  <Clock size={16} className="text-mint mt-0.5 shrink-0" />
                   <div>
                     <p className="text-sm text-white/80 font-medium">
                       Segunda a Sexta
@@ -149,7 +149,7 @@ export default function Footer() {
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Clock size={16} className="text-gold mt-0.5 shrink-0" />
+                  <Clock size={16} className="text-mint mt-0.5 shrink-0" />
                   <div>
                     <p className="text-sm text-white/80 font-medium">Sábado</p>
                     <p className="text-sm text-white/50">08h às 12h</p>

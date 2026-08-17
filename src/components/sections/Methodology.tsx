@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { FloatingLeaves } from "@/components/ui/LeafDecorations";
 
 const steps = [
   {
@@ -47,7 +48,10 @@ export default function Methodology() {
       className="py-20 md:py-28 bg-gradient-to-b from-cream to-cream-dark relative overflow-hidden"
     >
       {/* Decorative */}
-      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] rounded-full bg-olive/[0.02] blur-3xl -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] rounded-full bg-green/[0.03] blur-3xl -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+
+      {/* Floating leaves */}
+      <FloatingLeaves />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
@@ -59,14 +63,14 @@ export default function Methodology() {
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mt-4">
           {steps.map((step, i) => (
             <AnimatedSection key={step.number} delay={i * 0.12}>
-              <div className="group relative h-full p-8 rounded-2xl bg-white/70 hover:bg-white border border-transparent hover:border-gold/20 hover:shadow-xl hover:shadow-olive/5 transition-all duration-500">
+              <div className="group relative h-full p-8 rounded-2xl bg-white/70 hover:bg-white border border-transparent hover:border-green/15 hover:shadow-xl hover:shadow-green/8 transition-all duration-500">
                 {/* Step number */}
-                <span className="absolute top-6 right-8 font-[family-name:var(--font-playfair)] text-6xl font-bold text-olive/[0.06] select-none group-hover:text-olive/10 transition-colors duration-500">
+                <span className="absolute top-6 right-8 font-[family-name:var(--font-playfair)] text-6xl font-bold text-green/[0.06] select-none group-hover:text-green/10 transition-colors duration-500">
                   {step.number}
                 </span>
 
                 <div className="relative z-10">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-olive/10 text-olive mb-5 group-hover:bg-olive group-hover:text-white transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-green/10 text-green mb-5 group-hover:bg-green group-hover:text-white transition-all duration-300">
                     <step.icon size={28} strokeWidth={1.5} />
                   </div>
 
