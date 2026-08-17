@@ -6,7 +6,7 @@ import {
   Clock,
   Phone,
 } from "lucide-react";
-import InstagramIcon from "@/components/icons/InstagramIcon";
+import { InstagramIcon } from "@/components/ui/InstagramIcon";
 
 const WHATSAPP_URL =
   "https://wa.me/5500000000000?text=Olá! Gostaria de agendar uma consulta com a nutricionista Kelly Camargo.";
@@ -75,7 +75,7 @@ export default function Footer() {
                   className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors duration-300"
                   aria-label="Instagram"
                 >
-                  <InstagramIcon size={18} />
+                  <InstagramIcon width={18} height={18} />
                 </a>
                 <a
                   href={WHATSAPP_URL}

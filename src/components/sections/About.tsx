@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { GraduationCap, Heart } from "lucide-react";
-import InstagramIcon from "@/components/icons/InstagramIcon";
+import { InstagramIcon } from "@/components/ui/InstagramIcon";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -105,7 +105,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 mt-4 px-5 py-3 rounded-full bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#F77737] text-white font-medium text-sm hover:shadow-lg hover:shadow-[#E1306C]/25 transition-all duration-300 hover:-translate-y-0.5"
               >
-                <InstagramIcon size={20} />
+                <InstagramIcon width={20} height={20} />
                 @kellycamargonutri
               </a>
             </div>
