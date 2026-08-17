@@ -103,7 +103,7 @@ export default function Hero() {
               {/* Image container */}
               <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl shadow-green/15">
                 <Image
-                  src="/kelly-hero.jpg"
+                  src="/placeholder.jpg"
                   alt="Kelly Camargo — Nutricionista Funcional"
                   fill
                   className="object-cover object-top"

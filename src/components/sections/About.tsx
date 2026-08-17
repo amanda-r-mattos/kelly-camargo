@@ -35,7 +35,7 @@ export default function About() {
             <div className="relative">
               <div className="relative w-full aspect-[4/5] max-w-md mx-auto rounded-3xl overflow-hidden shadow-xl shadow-green/10">
                 <Image
-                  src="/kelly-hero.jpg"
+                  src="/placeholder.jpg"
                   alt="Kelly Camargo — Nutricionista"
                   fill
                   className="object-cover"
